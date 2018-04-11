@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VK Feed</string>
+    <string name="auth">Авторизация</string>
+    <string name="error_auth_message">Ошибка авторизации</string>
+    <string name="default_date">DEFAULT DATE</string>
+    <string name="default_text">DEFAULT TEXT</string>
+    <string name="no_connection">Нет связи с сервером</string>
+    <string name="refresh">Обновить</string>
+    <string name="action_bar_likes_title">Лайки:</string>
+    <string name="like">Like</string>
+    <integer name="com_vk_sdk_AppId">6439761</integer>
+</resources>

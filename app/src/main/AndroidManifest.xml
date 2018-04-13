@@ -21,9 +21,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.AuthActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".ui.activities.PostActivity"></activity>
+            android:name=".ui.activities.AuthActivity">
+
+        </activity>
+        <activity android:name=".ui.activities.PostActivity">
+
+        </activity>
     </application>
 
 </manifest>

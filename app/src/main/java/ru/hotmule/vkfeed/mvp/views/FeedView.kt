@@ -9,7 +9,7 @@ import ru.hotmule.vkfeed.mvp.models.feed.FeedResponse
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface FeedView : MvpView {
-    fun setPosts(responce: FeedResponse)
+    fun setPosts(response: FeedResponse)
 
     @StateStrategyType(SkipStrategy::class)
     fun setMorePosts(feedResponse: FeedResponse)

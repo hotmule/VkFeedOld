@@ -23,7 +23,7 @@ class FeedPresenter : BasePresenter<FeedView>() {
     }
 
     private lateinit var token: String
-    private lateinit var secondPageInfo: String
+    private lateinit var nextPageInfo: String
     private var isFirstPage = true
 
     fun onTokenLoaded(token: String) {
@@ -37,7 +37,7 @@ class FeedPresenter : BasePresenter<FeedView>() {
     }
 
     fun onBottomReached() {
-        val observable = vkService.getMorePosts(token, secondPageInfo)
+        val observable = vkService.getMorePosts(token, nextPageInfo)
         loadPosts(observable)
     }
 
@@ -52,7 +52,7 @@ class FeedPresenter : BasePresenter<FeedView>() {
 
     private fun onLoadingSuccess(feedResponse: FeedResponse) {
         viewState.hideProgress()
-        secondPageInfo = feedResponse.nextFrom
+        nextPageInfo = feedResponse.nextFrom
 
         if (isFirstPage) {
             viewState.setPosts(feedResponse)

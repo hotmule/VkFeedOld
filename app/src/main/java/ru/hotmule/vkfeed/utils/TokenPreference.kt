@@ -2,7 +2,6 @@ package ru.hotmule.vkfeed.utils
 
 import android.content.Context
 
-
 class TokenPreference(context: Context) {
 
     private val PREFERENCE_NAME = "token_shared_preference"

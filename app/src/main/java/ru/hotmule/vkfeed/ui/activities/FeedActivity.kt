@@ -77,8 +77,8 @@ class FeedActivity :
         progressBar.visibility = View.GONE
     }
 
-    override fun setPosts(responce: FeedResponse) {
-        postsAdapter.setPosts(responce)
+    override fun setPosts(response: FeedResponse) {
+        postsAdapter.setPosts(response)
     }
 
     override fun setMorePosts(feedResponse: FeedResponse) {

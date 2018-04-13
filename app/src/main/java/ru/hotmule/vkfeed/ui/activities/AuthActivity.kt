@@ -2,7 +2,6 @@ package ru.hotmule.vkfeed.ui.activities
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import com.arellomobile.mvp.MvpAppCompatActivity
@@ -17,9 +16,6 @@ import com.vk.sdk.api.VKError
 import com.vk.sdk.VKAccessToken
 import com.vk.sdk.VKCallback
 import ru.hotmule.vkfeed.utils.TokenPreference
-import android.graphics.Color.parseColor
-import android.view.WindowManager
-import android.os.Build
 
 
 class AuthActivity : MvpAppCompatActivity(), AuthView {
@@ -35,19 +31,10 @@ class AuthActivity : MvpAppCompatActivity(), AuthView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
-        changeStatusBarColor()
+        supportActionBar?.hide()
 
         authButton.setOnClickListener {
             authPresenter.onAuthButtonClicked()
-        }
-    }
-
-    private fun changeStatusBarColor() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            val window = window
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = applicationContext.getColor(R.color.colorPrimaryDark)
         }
     }
 

@@ -45,6 +45,8 @@ class AuthActivity : MvpAppCompatActivity(), AuthView {
                         val preference = TokenPreference(applicationContext)
                         preference.setAccessToken(res.accessToken)
 
+                        Toast.makeText(applicationContext, "Успешно", Toast.LENGTH_LONG).show();
+
                         startActivity(FeedActivity.buildIntent(applicationContext))
                         finish()
                     }
